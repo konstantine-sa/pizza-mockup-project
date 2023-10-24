@@ -2,7 +2,7 @@ import ContentTop from "./ContentTop/ContentTop";
 
 function Content() {
   return (
-    <section>
+    <section className="my-10 mx-auto px-10">
       <ContentTop />
     </section>
   );

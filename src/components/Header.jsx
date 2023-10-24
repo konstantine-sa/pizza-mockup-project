@@ -2,7 +2,7 @@ import pizzaLogo from "../assets/img/pizza-logo.svg";
 
 function Header() {
   return (
-    <div className="flex flex-wrap justify-between items-end w-full  bg-white p-4 sm:p-10 sm:rounded-xl">
+    <div className="flex flex-wrap justify-between items-end w-full  bg-white p-4 sm:p-10 sm:rounded-t-xl border-b">
       {/* header logo & title */}
       <div className="flex gap-2 sm:gap-4">
         <img
@@ -12,10 +12,13 @@ function Header() {
           className="w-7 sm:w-[38px] "
         />
         <div>
-          <h1 className="text-base sm:text-2xl font-bold text-slate-900">
+          <a
+            href="/"
+            className="text-base sm:text-3xl font-bold text-slate-900"
+          >
             PizzaHaus
-          </h1>
-          <p className="text-sm font-bold text-gray-600">
+          </a>
+          <p className="text-sm sm:text-base font-bold text-gray-600">
             Unsere Pizza, dein Genuss!
           </p>
         </div>
@@ -38,7 +41,7 @@ function Header() {
       </div>
 
       {/* header cart button */}
-      <div className="w-[60px] h-[30px] sm:w-[140px] sm:h-[50px] relative bg-[#fe5f1e] rounded-[30px] ">
+      <div className="w-[60px] h-[30px] sm:w-[140px] sm:h-[50px] relative bg-[#fe5f1e] hover:bg-[#fe401e] duration-150 ease-in-out cursor-pointer rounded-[30px] ">
         <div className="sm:w-[23px] sm:h-[23px] pb-px sm:left-[26px] sm:top-[14px] absolute justify-center items-center inline-flex">
           <div className="sm:w-[23px] sm:h-[22px] text-center text-white text-sm sm:text-base font-semibold font-['Nunito'] leading-[23px] max-sm:hidden">
             0 €
