@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import Content from "./components/Content/Content";
+import Footer from "./components/Footer";
 
 function App() {
   return (
@@ -7,6 +8,7 @@ function App() {
       <div className="max-w-[1400px] h-[100%] bg-white sm:rounded-xl  ">
         <Header />
         <Content />
+        <Footer />
       </div>
     </div>
   );
