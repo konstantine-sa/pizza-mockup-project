@@ -67,7 +67,7 @@ function CartItem() {
 
       {/* cart item price */}
       <div className="flex justify-center items-center w-[33%]">
-        <b className="text-[22px]">25 €</b>
+        <b className="text-[22px]">15 €</b>
       </div>
 
       {/* cart item remove */}

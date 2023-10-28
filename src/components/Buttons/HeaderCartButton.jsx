@@ -1,7 +1,7 @@
 function HeaderCartButton() {
   return (
     <div>
-      <div className="w-[60px] h-[30px] sm:w-[140px] sm:h-[50px] relative bg-[#fe5f1e] hover:bg-[#fe401e] duration-150 ease-in-out cursor-pointer rounded-[30px] ">
+      <div className="w-[60px] h-[30px] sm:w-[140px] sm:h-[50px] relative bg-[#fe5f1e] hover:bg-[#e1480b] duration-150 ease-in-out cursor-pointer rounded-[30px] ">
         <div className="sm:w-[23px] sm:h-[23px] pb-px sm:left-[26px] sm:top-[14px] absolute justify-center items-center inline-flex">
           <div className="sm:w-[23px] sm:h-[22px] text-center text-white text-sm sm:text-base font-semibold font-['Nunito'] leading-[23px] max-sm:hidden">
             0 €

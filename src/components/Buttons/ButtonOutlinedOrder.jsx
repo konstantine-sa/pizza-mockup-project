@@ -1,4 +1,4 @@
-function ButtonOutlined() {
+function ButtonOutlinedOrder() {
   return (
     <div
       className="group flex gap-2 items-center border-[#fe5f1e] hover:bg-[#fe5f1e] 
@@ -20,4 +20,4 @@ function ButtonOutlined() {
   );
 }
 
-export default ButtonOutlined;
+export default ButtonOutlinedOrder;

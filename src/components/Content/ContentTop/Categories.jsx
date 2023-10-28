@@ -2,7 +2,7 @@ function Categories() {
   return (
     <ul className="flex gap-3">
       <li
-        className="bg-[#f9f9f9] py-3 px-7  font-semibold text-base rounded-3xl cursor-pointer 
+        className="py-3 px-7  font-semibold text-base rounded-3xl cursor-pointer 
        bg-[#282828] text-white"
       >
         Alle

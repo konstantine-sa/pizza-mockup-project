@@ -1,4 +1,4 @@
-import ButtonOutlined from "../Buttons/ButtonOutlined";
+import ButtonOutlinedOrder from "../Buttons/ButtonOutlinedOrder";
 
 function ContentItem() {
   return (
@@ -26,7 +26,7 @@ function ContentItem() {
       {/* item bottom */}
       <div className="flex items-center justify-between mt-5">
         <div className="font-black text-xl ">ab 12 €</div>
-        <ButtonOutlined />
+        <ButtonOutlinedOrder />
       </div>
     </div>
   );

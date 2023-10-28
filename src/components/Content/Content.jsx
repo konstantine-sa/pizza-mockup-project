@@ -6,10 +6,10 @@ import ContentTop from "./ContentTop/ContentTop";
 function Content() {
   return (
     <section className="my-10 mx-auto px-10">
-      {/* <ContentTop />
+      <ContentTop />
       <ContentTitle />
-      <ContentItems /> */}
-      <Cart />
+      <ContentItems />
+      {/* <Cart /> */}
     </section>
   );
 }
