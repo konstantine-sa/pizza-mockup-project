@@ -1,0 +1,219 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Alle"
+    },
+    {
+      "id": 2,
+      "name": "Fleisch"
+    },
+    {
+      "id": 3,
+      "name": "Vegetarisch"
+    },
+    {
+      "id": 4,
+      "name": "Gegrillt"
+    },
+    {
+      "id": 5,
+      "name": "Scharf"
+    }
+  ],
+
+  "pizzas": [
+    {
+      "id": 0,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/upload/iblock/43b/tuiere3j1kjx7fa4lq1itvu5397u5f7w.webp",
+      "name": "Kebab Grill Pizza",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [4.5, 6.0, 7.0],
+      "weight": [500, 700, 900],
+      "category": 4,
+      "rating": 4,
+      "content": "Tomatensauce (Grundlage), Petersilie, rote Zwiebel, Paprika, Tomaten, Mozzarella, Lammkebab, Aubergine"
+    },
+    {
+      "id": 1,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/828/q13rdjpplrwhhl9bu81zk00op8rolm3e.webp",
+      "name": "Pepperoni auf Hawaii",
+      "types": [0],
+      "sizes": [30, 35],
+      "price": [5.5, 7, 0],
+      "weight": [650, 750],
+      "category": 2,
+      "rating": 4.2,
+      "content": "Tomatensauce (Grundlage), geräuchertes Hühnchen, Pepperoni Salami, Ananas, Mozzarella"
+    },
+    {
+      "id": 2,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/eb1/2evm4y7j6klj7s7tt8b17uc3g01nibx3.webp",
+      "name": "Teriyaki-Pizza",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [5.0, 7.0, 8.5],
+      "weight": [450, 550, 850],
+      "category": 2,
+      "rating": 4.1,
+      "content": "Sahnesauce Alfredo (Grundlage), Sesamkante, Tigergarnele, Ananas, Champignons, Mozzarella"
+    },
+    {
+      "id": 3,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/d57/17sb53p66c5e9rqlnma5dx1b6u06ow4x.webp",
+      "name": "Tom Yum",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [4.5, 6.0, 7.5],
+      "weight": [450, 550, 850],
+      "category": 4,
+      "rating": 4.5,
+      "content": "Sahnesauce Alfredo (Grundlage), Petersilie, Miesmuscheln, gegrilltes halal Hähnchen, Champignons, Mozzarella"
+    },
+    {
+      "id": 4,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/798/0mfxfwe02snsrb4g6nr65qti3p5l2apk.webp",
+      "name": "Kartoffel-Papa",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [4.25, 5.5, 7.25],
+      "weight": [400, 550, 790],
+      "category": 4,
+      "rating": 4.6,
+      "content": "BBQ-Sauce (Grundlage), Speck, gegrilltes halal Hähnchen, rote Zwiebel, Paprika, Mozzarella, Maissirup, Kartoffeln"
+    },
+    {
+      "id": 5,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/c12/c127a175c2439fd7eb26c79a9035aa57.webp",
+      "name": "Burger-Pizza",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [3.75, 5.0, 6.5],
+      "weight": [450, 700, 870],
+      "category": 4,
+      "rating": 4.6,
+      "content": "BBQ-Sauce (Grundlage), Speck, gegrilltes halal Hähnchen, rote Zwiebel, Paprika, Mozzarella, Maissirup, Kartoffeln"
+    },
+    {
+      "id": 6,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/f38/f38b33ebe98b8cecec084e14553c608f.webp",
+      "name": "Vier-Käse",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [4.5, 6.5, 8.0],
+      "weight": [480, 650, 980],
+      "category": 3,
+      "rating": 4.8,
+      "content": "Sahnesauce Alfredo (Grundlage), Roquefort-Käse, Mozzarella, Parmesan, Cheddar"
+    },
+    {
+      "id": 7,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/514/514070bd831b5ef1708cefc171b0c366.webp",
+      "name": "Jack the Chicken",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [4.5, 6.5, 8.0],
+      "weight": [550, 750, 950],
+      "category": 2,
+      "rating": 4.2,
+      "content": "BBQ-Sauce (Grundlage), Jalapeño-Pfeffer, Speck, gegrilltes halal Hähnchen, rote Zwiebel, Champignons, Mozzarella"
+    },
+    {
+      "id": 8,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/590/5902b7fe46706d2b95b27378848410f8.webp",
+      "name": "Salami mit Pilzen",
+      "types": [0, 1],
+      "sizes": [30],
+      "price": [4.5],
+      "weight": [550],
+      "category": 2,
+      "rating": 4.3,
+      "content": "Tomatensauce (Grundlage), Pepperoni Salami, Champignons, Mozzarella"
+    },
+    {
+      "id": 9,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/317/3177dbcaf14b959f96f09cd81798ccf3.webp",
+      "name": "Wurst und Pilze",
+      "types": [0, 1],
+      "sizes": [30],
+      "price": [4.5],
+      "weight": [550],
+      "category": 2,
+      "rating": 4.3,
+      "content": "Tomatensauce (Grundlage), Bayerische Wurst, Mais, rote Zwiebel, Champignons, Mozzarella"
+    },
+    {
+      "id": 10,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/828/8283f9b4963ced5f390dfb1388e40264.webp",
+      "name": "Hähnchen und Schinken",
+      "types": [0, 1],
+      "sizes": [30],
+      "price": [4.5],
+      "weight": [550],
+      "category": 2,
+      "rating": 4.3,
+      "content": "Tomatensauce (Grundlage), Schinken, geräuchertes Hühnchen, Paprika, Mozzarella"
+    },
+    {
+      "id": 11,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/c9a/c9a82a5662295d8a3290fa9089e5315b.webp",
+      "name": "Schinken mit Pilzen",
+      "types": [0, 1],
+      "sizes": [30],
+      "price": [4.5],
+      "weight": [550],
+      "category": 2,
+      "rating": 4.2,
+      "content": "Tomatensauce (Grundlage), Schinken, Champignons, Mozzarella"
+    },
+    {
+      "id": 12,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/upload/iblock/658/6582cf3277f925da80a9a9a181924ff9.webp",
+      "name": "Jäger-Pizza",
+      "types": [0, 1],
+      "sizes": [30],
+      "price": [4.5],
+      "weight": [550],
+      "category": 2,
+      "rating": 4.4,
+      "content": "Tomatensauce (Grundlage), Petersilie, Bayerische Wurst, rote Zwiebel, eingelegte Gurke, Mozzarella"
+    },
+    {
+      "id": 13,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/upload/iblock/083/083561499d7b208a5ea99c6a2c0ba01c.webp",
+      "name": "Pilzpizza",
+      "types": [0, 1],
+      "sizes": [30],
+      "price": [4.5],
+      "weight": [550],
+      "category": 2,
+      "rating": 4.5,
+      "content": "Tomatensauce (Grundlage), Petersilie, Champignons, Mozzarella, Pfifferlinge"
+    },
+    {
+      "id": 14,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/bdc/bdcf96026a19b14224f95ba504db540b.webp",
+      "name": "Hawaiian Pizza",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [3.75, 5.5, 7.0],
+      "weight": [460, 690, 940],
+      "category": 1,
+      "rating": 4.2,
+      "content": "Tomatensauce (Grundlage), geräuchertes Hühnchen, Ananas, Mozzarella"
+    },
+    {
+      "id": 15,
+      "imageUrl": "https://pizza.od.ua/upload/resize_cache/webp/iblock/a58/a586e85945ff13feccb53a7e4c6ddd20.webp",
+      "name": "Caesar",
+      "types": [0, 1],
+      "sizes": [25, 30, 35],
+      "price": [4.25, 6, 7.5],
+      "weight": [550, 700, 950],
+      "category": 1,
+      "rating": 4.7,
+      "content": "Tomatensauce (Grundlage), Speck, gegrilltes halal Hähnchen, Mozzarella, Parmesan"
+    }
+  ]
+}

@@ -1,7 +1,7 @@
 import Categories from "./Categories";
 import Filter from "./Filter";
 
-function ContentTop() {
+function PizzaBlockTopMenu() {
   return (
     <section className="flex justify-between w-full">
       <Categories />
@@ -10,4 +10,4 @@ function ContentTop() {
   );
 }
 
-export default ContentTop;
+export default PizzaBlockTopMenu;

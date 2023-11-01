@@ -2,14 +2,14 @@ import CartTop from "./CartTop";
 import CartContent from "./CartContent";
 import CartBottom from "./CartBottom";
 
-function Cart() {
+function CartBlock() {
   return (
-    <div className="max-w-[820px] my-20 mx-auto">
+    <section className="max-w-[820px] sm:my-20 mx-auto">
       <CartTop />
       <CartContent />
       <CartBottom />
-    </div>
+    </section>
   );
 }
 
-export default Cart;
+export default CartBlock;

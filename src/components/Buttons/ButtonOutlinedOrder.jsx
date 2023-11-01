@@ -1,6 +1,7 @@
-function ButtonOutlinedOrder() {
+function ButtonOutlinedOrder({ itemCount, setItemCount }) {
   return (
-    <div
+    <button
+      onClick={() => setItemCount(itemCount + 1)}
       className="group flex gap-2 items-center border-[#fe5f1e] hover:bg-[#fe5f1e] 
     text-[#fe5f1e] hover:text-white fill-[#fe5f1e] hover:fill-white border-[1px] py-2 px-5 rounded-3xl duration-150 cursor-pointer"
     >
@@ -14,9 +15,9 @@ function ButtonOutlinedOrder() {
       </svg>
       <span className="   font-semibold">Hinzufügen</span>
       <div className="flex justify-center items-center text-sm bg-[#fe5f1e] group-hover:bg-white  text-white group-hover:text-[#fe5f1e] w-6 h-6  rounded-[50%] duration-150">
-        <p className=" ">2</p>
+        <p className=" ">{itemCount}</p>
       </div>
-    </div>
+    </button>
   );
 }
 

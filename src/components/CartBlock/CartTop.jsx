@@ -1,11 +1,11 @@
 function CartTop() {
   return (
     <div className="flex justify-between items-end w-full">
-      <div className="flex items-center gap-3 text-4xl font-semibold ">
+      <div className="flex items-center gap-1 sm:gap-3 text-base sm:text-4xl font-semibold ">
         <svg
-          className="w-8 h-8 stroke-black"
-          width="18"
-          height="18"
+          className="w-4 h-4 sm:w-8 sm:h-8 stroke-black"
+          width="12"
+          height="12"
           viewBox="0 0 18 18"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -34,11 +34,12 @@ function CartTop() {
         </svg>
         Warenkorb
       </div>
-      <div className="group flex gap-3 items-center cursor-pointer text-gray-400 ">
+
+      <div className="group flex justify-end  gap-1  cursor-pointer  text-sm sm:text-xl text-gray-400 ">
         <svg
-          className="w-5 h-5 stroke-gray-400 group-hover:stroke-gray-950 duration-150"
-          width="20"
-          height="20"
+          className="w-5 h-5 sm:w-8 sm:h-8 bottom-2 stroke-gray-400 group-hover:stroke-gray-950 duration-150"
+          width="12"
+          height="12"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
@@ -50,9 +51,6 @@ function CartTop() {
             strokeLinejoin="round"
           />
         </svg>
-        <span className="text-lg group-hover:text-gray-950 duration-150">
-          Warenkorb leeren
-        </span>
       </div>
     </div>
   );

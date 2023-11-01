@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ButtonCompleteOrder from "../Buttons/ButtonCompleteOrder";
 import ButtonOutlinedBack from "../Buttons/ButtonOutlinedBack";
 
@@ -17,7 +18,9 @@ function CartBottom() {
 
       {/* bottom buttons */}
       <div className="flex justify-between mt-14">
-        <ButtonOutlinedBack />
+        <Link to="/">
+          <ButtonOutlinedBack />
+        </Link>
         <ButtonCompleteOrder />
       </div>
     </div>

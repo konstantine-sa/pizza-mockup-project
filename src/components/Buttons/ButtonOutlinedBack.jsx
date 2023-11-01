@@ -1,6 +1,6 @@
 function ButtonOutlinedBack() {
   return (
-    <div
+    <button
       className="group flex gap-2 py-3 px-5 justify-center items-center w-[180px] border-[#D3D3D3] hover:bg-[#232323] 
       text-[#D3D3D3] hover:text-white fill-[#D3D3D3] hover:fill-white border-[1px] py-2 px-5 rounded-3xl duration-150 cursor-pointer"
     >
@@ -14,7 +14,7 @@ function ButtonOutlinedBack() {
         />
       </svg>
       <span className="font-semibold">Zurück gehen</span>
-    </div>
+    </button>
   );
 }
 

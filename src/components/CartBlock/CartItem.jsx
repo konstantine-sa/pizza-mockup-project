@@ -1,10 +1,10 @@
-function CartItem() {
+function CartItem(props) {
   return (
     <div className="flex w-full pt-8 mt-7 border-t-[1px] border-t-[#f6f6f6]">
       {/* cart item img */}
-      <div className="flex items-center mr-4 w-[10%]">
+      <div className="flex items-center mr-4 w-[15%]">
         <img
-          className="w-20 h-20"
+          className="w-9 h-9 sm:w-20 sm:h-20"
           src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
           alt="Pizza Foto"
         />
