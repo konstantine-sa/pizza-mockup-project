@@ -1,6 +1,6 @@
 function CartTop() {
   return (
-    <div className="flex justify-between items-end w-full">
+    <div className="flex justify-between items-center mt-4 sm:mt-0 md:items-end w-full">
       <div className="flex items-center gap-1 sm:gap-3 text-base sm:text-4xl font-semibold ">
         <svg
           className="w-4 h-4 sm:w-8 sm:h-8 stroke-black"

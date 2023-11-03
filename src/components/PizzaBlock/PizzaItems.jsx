@@ -1,6 +1,7 @@
 import React from "react";
-import ContentItem from "./PizzaItem";
+
 import PizzaBlockSkeleton from "./PizzaBlockSkeleton";
+import PizzaItem from "./PizzaItem";
 
 function PizzaItems() {
   const [pizzas, setPizzas] = React.useState([]);
@@ -16,12 +17,12 @@ function PizzaItems() {
   }, []);
 
   return (
-    <div className="flex flex-wrap gap-x-10 justify-between ">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 justify-center justify-items-center ">
       {isLoading
         ? [...new Array(6)].map((_, index) => (
             <PizzaBlockSkeleton key={index} />
           ))
-        : pizzas.map((pizza) => <ContentItem key={pizza.id} {...pizza} />)}
+        : pizzas.map((pizza) => <PizzaItem key={pizza.id} {...pizza} />)}
     </div>
   );
 }

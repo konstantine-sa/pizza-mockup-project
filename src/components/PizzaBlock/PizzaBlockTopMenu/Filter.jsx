@@ -13,7 +13,7 @@ function Filter() {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mt-5 lg:mt-0">
       {/* filter laber */}
       <div className="flex">
         <div className="flex  items-center ">
@@ -28,7 +28,9 @@ function Filter() {
               fill="#2C2C2C"
             />
           </svg>
-          <b className="mr-2  font-bold">Sortieren nach:</b>
+          <b className="mr-2  font-bold text-sm sm:text-base">
+            Sortieren nach:
+          </b>
           <span
             onClick={() => setIsVisible(!isVisible)}
             className="text-[#fe5f1e]  border-b border-[#fe5f1e] border-dashed cursor-pointer"

@@ -21,7 +21,7 @@ function Categories() {
 
   return (
     <div>
-      <ul className="flex gap-3">
+      <ul className="flex flex-wrap gap-3 justify-center">
         {isLoading ? (
           <CategoriesSkeleton />
         ) : (
@@ -31,8 +31,8 @@ function Categories() {
               onClick={() => setCategory(obj.id)}
               className={
                 activeIndex === obj.id
-                  ? "py-3 px-7 font-semibold text-base rounded-3xl cursor-pointer bg-[#282828] text-white"
-                  : "bg-[#f9f9f9] py-3 px-7 text-[#232323] font-semibold text-base rounded-3xl cursor-pointer hover:bg-[#e0dddd] duration-150 ease-in-out "
+                  ? "py-1 px-4 md:py-3 md:px-7 font-semibold text-sm sm:text-base rounded-3xl cursor-pointer bg-[#282828] text-white"
+                  : "bg-[#f9f9f9] py-1 px-4 md:py-3 md:px-7 text-[#232323] text-sm font-semibold sm:text-base rounded-3xl cursor-pointer hover:bg-[#e0dddd] duration-150 ease-in-out "
               }
             >
               {obj.name}

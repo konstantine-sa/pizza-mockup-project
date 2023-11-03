@@ -8,9 +8,11 @@ function PizzaItem({ imageUrl, types, name, price, sizes }) {
   const typeNames = ["Dünner", "Traditioneller"];
 
   return (
-    <div className="w-72 mb-16 text-center">
-      <img src={imageUrl} alt="Das Foto des" />
-      <h4 className="mb-5 text-xl font-extrabold text-[#282828]">{name}</h4>
+    <div className="flex flex-col items-centerw-72 mb-16 text-center">
+      <img src={imageUrl} alt="Das Foto des" className="w-40 mx-auto md:w-72" />
+      <h4 className="mb-5 text-lg md:text-xl font-extrabold text-[#282828]">
+        {name}
+      </h4>
 
       {/* item selector */}
       <div className="flex flex-col rounded-xl p-2 pb-0 bg-[#f3f3f3]">
@@ -47,8 +49,8 @@ function PizzaItem({ imageUrl, types, name, price, sizes }) {
       </div>
 
       {/* item bottom */}
-      <div className="flex items-center justify-between mt-5">
-        <div className="font-black text-xl ">ab {price[activeSize]} €</div>
+      <div className="flex flex-col md:flex-row items-center justify-between mt-5">
+        <div className="font-black md:text-xl ">ab {price[activeSize]} €</div>
         <ButtonOutlinedOrder
           itemCount={itemCount}
           setItemCount={setItemCount}

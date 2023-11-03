@@ -2,8 +2,8 @@ function ButtonOutlinedOrder({ itemCount, setItemCount }) {
   return (
     <button
       onClick={() => setItemCount(itemCount + 1)}
-      className="group flex gap-2 items-center border-[#fe5f1e] hover:bg-[#fe5f1e] 
-    text-[#fe5f1e] hover:text-white fill-[#fe5f1e] hover:fill-white border-[1px] py-2 px-5 rounded-3xl duration-150 cursor-pointer"
+      className="group flex gap-2 items-center mt-4 md:mt-0 border-[#fe5f1e] hover:bg-[#fe5f1e] 
+    text-[#fe5f1e] hover:text-white fill-[#fe5f1e] hover:fill-white border-[1px]  py-2 px-5 rounded-3xl duration-150 cursor-pointer"
     >
       <svg
         width="12"
