@@ -1,23 +1,31 @@
 {
   "categories": [
     {
-      "id": 1,
+      "id": 0,
       "name": "Alle"
     },
     {
-      "id": 2,
+      "id": 1,
       "name": "Fleisch"
     },
     {
+      "id": 2,
+      "name": "Mit Meeresfrüchten"
+    },
+    {
       "id": 3,
-      "name": "Vegetarisch"
+      "name": "Mit Hänchen"
     },
     {
       "id": 4,
-      "name": "Gegrillt"
+      "name": "Vegetarisch"
     },
     {
       "id": 5,
+      "name": "Gegrillt"
+    },
+    {
+      "id": 6,
       "name": "Scharf"
     }
   ],
@@ -31,7 +39,7 @@
       "sizes": [25, 30, 35],
       "price": [4.5, 6.0, 7.0],
       "weight": [500, 700, 900],
-      "category": 4,
+      "category": [1, 5],
       "rating": 4,
       "content": "Tomatensauce (Grundlage), Petersilie, rote Zwiebel, Paprika, Tomaten, Mozzarella, Lammkebab, Aubergine"
     },
@@ -43,7 +51,7 @@
       "sizes": [30, 35],
       "price": [5.5, 7, 0],
       "weight": [650, 750],
-      "category": 2,
+      "category": [1, 3, 5],
       "rating": 4.2,
       "content": "Tomatensauce (Grundlage), geräuchertes Hühnchen, Pepperoni Salami, Ananas, Mozzarella"
     },
@@ -55,7 +63,7 @@
       "sizes": [25, 30, 35],
       "price": [5.0, 7.0, 8.5],
       "weight": [450, 550, 850],
-      "category": 2,
+      "category": [2],
       "rating": 4.1,
       "content": "Sahnesauce Alfredo (Grundlage), Sesamkante, Tigergarnele, Ananas, Champignons, Mozzarella"
     },
@@ -67,7 +75,7 @@
       "sizes": [25, 30, 35],
       "price": [4.5, 6.0, 7.5],
       "weight": [450, 550, 850],
-      "category": 4,
+      "category": [1, 2, 3, 5],
       "rating": 4.5,
       "content": "Sahnesauce Alfredo (Grundlage), Petersilie, Miesmuscheln, gegrilltes halal Hähnchen, Champignons, Mozzarella"
     },
@@ -79,7 +87,7 @@
       "sizes": [25, 30, 35],
       "price": [4.25, 5.5, 7.25],
       "weight": [400, 550, 790],
-      "category": 4,
+      "category": [1, 3, 5],
       "rating": 4.6,
       "content": "BBQ-Sauce (Grundlage), Speck, gegrilltes halal Hähnchen, rote Zwiebel, Paprika, Mozzarella, Maissirup, Kartoffeln"
     },
@@ -91,9 +99,9 @@
       "sizes": [25, 30, 35],
       "price": [3.75, 5.0, 6.5],
       "weight": [450, 700, 870],
-      "category": 4,
+      "category": [1],
       "rating": 4.6,
-      "content": "BBQ-Sauce (Grundlage), Speck, gegrilltes halal Hähnchen, rote Zwiebel, Paprika, Mozzarella, Maissirup, Kartoffeln"
+      "content": "Mitbällchen, Cheddar, Speck, Mozzarella, eingelegte Gurken, Tomaten, Burger-Sauce, Tomatensauce (Basis), rote Zwiebeln."
     },
     {
       "id": 6,
@@ -103,7 +111,7 @@
       "sizes": [25, 30, 35],
       "price": [4.5, 6.5, 8.0],
       "weight": [480, 650, 980],
-      "category": 3,
+      "category": [4],
       "rating": 4.8,
       "content": "Sahnesauce Alfredo (Grundlage), Roquefort-Käse, Mozzarella, Parmesan, Cheddar"
     },
@@ -115,7 +123,7 @@
       "sizes": [25, 30, 35],
       "price": [4.5, 6.5, 8.0],
       "weight": [550, 750, 950],
-      "category": 2,
+      "category": [1, 3, 5],
       "rating": 4.2,
       "content": "BBQ-Sauce (Grundlage), Jalapeño-Pfeffer, Speck, gegrilltes halal Hähnchen, rote Zwiebel, Champignons, Mozzarella"
     },
@@ -127,7 +135,7 @@
       "sizes": [30],
       "price": [4.5],
       "weight": [550],
-      "category": 2,
+      "category": [1],
       "rating": 4.3,
       "content": "Tomatensauce (Grundlage), Pepperoni Salami, Champignons, Mozzarella"
     },
@@ -139,7 +147,7 @@
       "sizes": [30],
       "price": [4.5],
       "weight": [550],
-      "category": 2,
+      "category": [1],
       "rating": 4.3,
       "content": "Tomatensauce (Grundlage), Bayerische Wurst, Mais, rote Zwiebel, Champignons, Mozzarella"
     },
@@ -151,7 +159,7 @@
       "sizes": [30],
       "price": [4.5],
       "weight": [550],
-      "category": 2,
+      "category": [1, 3, 5],
       "rating": 4.3,
       "content": "Tomatensauce (Grundlage), Schinken, geräuchertes Hühnchen, Paprika, Mozzarella"
     },
@@ -163,7 +171,7 @@
       "sizes": [30],
       "price": [4.5],
       "weight": [550],
-      "category": 2,
+      "category": [1],
       "rating": 4.2,
       "content": "Tomatensauce (Grundlage), Schinken, Champignons, Mozzarella"
     },
@@ -175,7 +183,7 @@
       "sizes": [30],
       "price": [4.5],
       "weight": [550],
-      "category": 2,
+      "category": [1],
       "rating": 4.4,
       "content": "Tomatensauce (Grundlage), Petersilie, Bayerische Wurst, rote Zwiebel, eingelegte Gurke, Mozzarella"
     },
@@ -187,7 +195,7 @@
       "sizes": [30],
       "price": [4.5],
       "weight": [550],
-      "category": 2,
+      "category": [4, 6],
       "rating": 4.5,
       "content": "Tomatensauce (Grundlage), Petersilie, Champignons, Mozzarella, Pfifferlinge"
     },
@@ -199,7 +207,7 @@
       "sizes": [25, 30, 35],
       "price": [3.75, 5.5, 7.0],
       "weight": [460, 690, 940],
-      "category": 1,
+      "category": [1, 3, 5],
       "rating": 4.2,
       "content": "Tomatensauce (Grundlage), geräuchertes Hühnchen, Ananas, Mozzarella"
     },
@@ -211,7 +219,7 @@
       "sizes": [25, 30, 35],
       "price": [4.25, 6, 7.5],
       "weight": [550, 700, 950],
-      "category": 1,
+      "category": [1, 3, 5],
       "rating": 4.7,
       "content": "Tomatensauce (Grundlage), Speck, gegrilltes halal Hähnchen, Mozzarella, Parmesan"
     }
