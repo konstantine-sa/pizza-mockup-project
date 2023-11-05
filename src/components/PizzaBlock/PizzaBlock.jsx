@@ -18,10 +18,10 @@ function PizzaBlock() {
 
   useEffect(() => {
     setIsLoading(true);
+    const category = categoryId > 0 ? `category=${categoryId}` : "";
+
     fetch(
-      `https://654082b145bedb25bfc20558.mockapi.io/pizza?${
-        categoryId > 0 ? `category=${categoryId}` : ""
-      }&sortBy=${filterSelected.sortProperty}&order=${filterSelected.sortWay}`
+      `https://654082b145bedb25bfc20558.mockapi.io/pizza?${category}&sortBy=${filterSelected.sortProperty}&order=${filterSelected.sortWay}`
     )
       .then((res) => res.json())
       .then((json) => {

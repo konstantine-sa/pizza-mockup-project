@@ -41,8 +41,6 @@ function PizzaBlockTopMenu({
     },
   ];
 
-  console.log(filterSelected);
-
   const onClickSelectFilter = (index) => {
     setFilterSelected(index);
     setIsVisible(!isVisible);
