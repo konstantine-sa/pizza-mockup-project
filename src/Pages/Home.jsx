@@ -1,7 +1,6 @@
-import React from "react";
 import PizzaBlock from "../components/PizzaBlock/PizzaBlock";
 
-function Pizza() {
+function Home() {
   return (
     <section className="my-6 sm:my-10 mx-1 sm:mx-auto px-3 sm:px-10">
       <PizzaBlock />
@@ -9,4 +8,4 @@ function Pizza() {
   );
 }
 
-export default Pizza;
+export default Home;
