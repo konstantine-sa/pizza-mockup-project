@@ -1,19 +1,24 @@
 import { useState, useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 
 import CategoriesSkeleton from "./CategoriesSkeleton";
+import { setSort, setCategoryId } from "../../../Redux/slices/pizzaFilterSlice";
 
-function PizzaBlockTopMenu({
-  categoryId,
-  onClickCategory,
-  filterSelected,
-  setFilterSelected,
-}) {
+function PizzaBlockTopMenu() {
   const [categories, setCategories] = useState([]);
+
+  const dispatch = useDispatch();
+  const onClickCategory = (id) => {
+    dispatch(setCategoryId(id));
+  };
+  const sort = useSelector((state) => state.pizzaFilter.sort);
+
+  const categoryId = useSelector((state) => state.pizzaFilter.categoryId);
 
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
 
-  const filterList = [
+  const sortList = [
     {
       name: "Beliebtheit",
       sortProperty: "rating",
@@ -41,8 +46,8 @@ function PizzaBlockTopMenu({
     },
   ];
 
-  const onClickSelectFilter = (index) => {
-    setFilterSelected(index);
+  const onClickSelectFilter = (obj) => {
+    dispatch(setSort(obj));
     setIsVisible(!isVisible);
   };
 
@@ -103,7 +108,7 @@ function PizzaBlockTopMenu({
               onClick={() => setIsVisible(!isVisible)}
               className="text-[#fe5f1e]  border-b border-[#fe5f1e] border-dashed cursor-pointer"
             >
-              {filterSelected.name}
+              {sort.name}
             </span>
           </div>
         </div>
@@ -113,12 +118,12 @@ function PizzaBlockTopMenu({
         {isVisible && (
           <div className="absolute w-64 right-0 mt-4 pt-2 bg-white shadow-md rounded-lg">
             <ul className="">
-              {filterList.map((obj, index) => (
+              {sortList.map((obj, index) => (
                 <li
                   key={index}
                   onClick={() => onClickSelectFilter(obj)}
                   className={
-                    filterSelected.name === obj.name
+                    sort.name === obj.name
                       ? "px-5 py-3 cursor-pointer text-[#fe5f1e] bg-[rgba(254,95,30,0.05)]"
                       : "px-5 py-3 cursor-pointer hover:text-[#fe5f1e]"
                   }
