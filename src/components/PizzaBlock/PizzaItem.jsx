@@ -15,7 +15,7 @@ function PizzaItem({ imageUrl, types, name, price, sizes }) {
       </h4>
 
       {/* item selector */}
-      <div className="flex flex-col rounded-xl p-2 pb-0 bg-[#f3f3f3]">
+      <div className="flex flex-col rounded-xl p-2 pb-0 bg-[#f3f3f3] select-none">
         <ul className="flex justify-evenly mb-2">
           {types.map((type, index) => (
             <li

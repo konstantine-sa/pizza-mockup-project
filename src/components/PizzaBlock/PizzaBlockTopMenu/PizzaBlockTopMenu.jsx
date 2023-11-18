@@ -1,11 +1,41 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useSelector, useDispatch } from "react-redux";
+import axios from "axios";
 
 import CategoriesSkeleton from "./CategoriesSkeleton";
 import { setSort, setCategoryId } from "../../../Redux/slices/pizzaFilterSlice";
 
+export const sortList = [
+  {
+    name: "Beliebtheit",
+    sortProperty: "rating",
+    sortDirection: "desc",
+  },
+  {
+    name: "Preis ↑",
+    sortProperty: "price",
+    sortDirection: "asc",
+  },
+  {
+    name: "Preis ↓",
+    sortProperty: "price",
+    sortDirection: "desc",
+  },
+  {
+    name: "Alphabet A-Z",
+    sortProperty: "name",
+    sortDirection: "asc",
+  },
+  {
+    name: "Alphabet Z-A",
+    sortProperty: "name",
+    sortDirection: "desc",
+  },
+];
+
 function PizzaBlockTopMenu() {
   const [categories, setCategories] = useState([]);
+  const sortRef = useRef();
 
   const dispatch = useDispatch();
   const onClickCategory = (id) => {
@@ -18,50 +48,31 @@ function PizzaBlockTopMenu() {
   const [isLoading, setIsLoading] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
 
-  const sortList = [
-    {
-      name: "Beliebtheit",
-      sortProperty: "rating",
-      sortWay: "desc",
-    },
-    {
-      name: "Preis ↑",
-      sortProperty: "price",
-      sortWay: "asc",
-    },
-    {
-      name: "Preis ↓",
-      sortProperty: "price",
-      sortWay: "desc",
-    },
-    {
-      name: "Alphabet A-Z",
-      sortProperty: "name",
-      sortWay: "asc",
-    },
-    {
-      name: "Alphabet Z-A",
-      sortProperty: "name",
-      sortWay: "desc",
-    },
-  ];
-
   const onClickSelectFilter = (obj) => {
     dispatch(setSort(obj));
     setIsVisible(!isVisible);
   };
 
   useEffect(() => {
-    fetch("https://654082b145bedb25bfc20558.mockapi.io/categories")
-      .then((res) => res.json())
-      .then((json) => {
-        setCategories(json);
+    axios
+      .get("https://654082b145bedb25bfc20558.mockapi.io/categories")
+      .then((res) => {
+        setCategories(res.data);
         setIsLoading(false);
       });
   }, []);
 
+  // on click on out of sort popup area
+  useEffect(() => {
+    document.body.addEventListener("click", (event) => {
+      if (!event.composedPath().includes(sortRef.current)) {
+        setIsVisible(false);
+      }
+    });
+  }, []);
+
   return (
-    <section className="flex flex-col lg:flex-row items-center justify-between w-full ">
+    <section className="flex flex-col lg:flex-row items-center justify-between w-full select-none">
       {/* categories menu */}
       <div>
         <ul className="flex flex-wrap gap-3 justify-center">
@@ -86,7 +97,7 @@ function PizzaBlockTopMenu() {
       </div>
 
       {/* Filtering */}
-      <div className="relative mt-5 lg:mt-0">
+      <div ref={sortRef} className="relative mt-5 w-full sm:w-64 lg:mt-0">
         {/* filter label */}
         <div className="flex">
           <div className="flex  items-center ">
@@ -116,7 +127,7 @@ function PizzaBlockTopMenu() {
         {/* filter popup */}
 
         {isVisible && (
-          <div className="absolute w-64 right-0 mt-4 pt-2 bg-white shadow-md rounded-lg">
+          <div className="flex justify-center text-center lg:text-start lg:justify-start absolute w-full sm:w-64 right-0 mt-4 pt-2 bg-[#F9F9F9] shadow-md rounded-lg">
             <ul className="">
               {sortList.map((obj, index) => (
                 <li

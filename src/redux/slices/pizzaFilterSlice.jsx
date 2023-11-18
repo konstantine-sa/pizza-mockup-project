@@ -5,7 +5,7 @@ const initialState = {
   sort: {
     name: "Beliebtheit",
     sortProperty: "rating",
-    sortWay: "desc",
+    sortDirection: "desc",
   },
 };
 
@@ -19,8 +19,12 @@ const pizzaFilterSlice = createSlice({
     setSort(state, action) {
       state.sort = action.payload;
     },
+    setFilters(state, action) {
+      state.categoryId = Number(action.payload.categoryId);
+      state.sort.sortProperty = action.payload.sort;
+    },
   },
 });
 
-export const { setCategoryId, setSort } = pizzaFilterSlice.actions;
+export const { setCategoryId, setSort, setFilters } = pizzaFilterSlice.actions;
 export default pizzaFilterSlice.reducer;
