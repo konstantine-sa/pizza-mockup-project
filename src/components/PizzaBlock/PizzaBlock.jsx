@@ -7,7 +7,7 @@ import qs from "qs";
 import PizzaBlockTopMenu, {
   sortList,
 } from "./PizzaBlockTopMenu/PizzaBlockTopMenu";
-import PizzaTitle from "./PizzaTitle";
+// import PizzaTitle from "./PizzaTitle";
 import PizzaItem from "./PizzaItem";
 import PizzaBlockSkeleton from "./PizzaBlockSkeleton";
 import { SearchContext } from "../../App";
@@ -84,7 +84,6 @@ function PizzaBlock() {
   return (
     <div>
       <PizzaBlockTopMenu />
-      <PizzaTitle />
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-10 justify-center justify-items-center ">
         {isLoading ? skeletons : pizzaItems}
       </div>

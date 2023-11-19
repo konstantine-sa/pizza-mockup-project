@@ -2,6 +2,10 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
   categoryId: 0,
+  filterCategory: {
+    id: 0,
+    name: "Alle Pizzen",
+  },
   sort: {
     name: "Beliebtheit",
     sortProperty: "rating",
@@ -23,8 +27,12 @@ const pizzaFilterSlice = createSlice({
       state.categoryId = Number(action.payload.categoryId);
       state.sort.sortProperty = action.payload.sort;
     },
+    setFilterCategory(state, action) {
+      state.filterCategory = action.payload;
+    },
   },
 });
 
-export const { setCategoryId, setSort, setFilters } = pizzaFilterSlice.actions;
+export const { setCategoryId, setSort, setFilters, setFilterCategory } =
+  pizzaFilterSlice.actions;
 export default pizzaFilterSlice.reducer;
