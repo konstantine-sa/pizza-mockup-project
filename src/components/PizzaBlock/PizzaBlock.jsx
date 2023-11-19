@@ -15,7 +15,7 @@ import {
   setCategoryId,
   setSort,
   setFilters,
-} from "../../Redux/slices/pizzaFilterSlice";
+} from "../../../src/redux/slices/pizzaFilterSlice.jsx";
 
 function PizzaBlock() {
   const dispatch = useDispatch();
