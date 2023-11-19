@@ -3,7 +3,10 @@ import { useSelector, useDispatch } from "react-redux";
 import axios from "axios";
 
 import CategoriesSkeleton from "./CategoriesSkeleton";
-import { setSort, setCategoryId } from "../../../Redux/slices/pizzaFilterSlice";
+import {
+  setSort,
+  setCategoryId,
+} from "../../../../src/redux/slices/pizzaFilterSlice.jsx";
 
 export const sortList = [
   {
