@@ -1,7 +1,35 @@
-function ButtonOutlinedOrder({ itemCount, setItemCount }) {
+import { useSelector, useDispatch } from "react-redux";
+import { addItem } from "../../redux/slices/cartSlice";
+
+function ButtonOutlinedOrder({
+  id,
+  name,
+  type,
+  size,
+  price,
+  imageUrl,
+  itemCount,
+  setItemCount,
+}) {
+  const dispatch = useDispatch();
+
+  const onClickAdd = () => {
+    const item = {
+      id,
+      name,
+      type,
+      size,
+      price,
+      imageUrl,
+    };
+
+    dispatch(addItem(item));
+  };
+
   return (
     <button
       onClick={() => setItemCount(itemCount + 1)}
+      onClick={() => onClickAdd()}
       className="group flex gap-2 items-center mt-4 md:mt-0 border-[#fe5f1e] hover:bg-[#fe5f1e] 
     text-[#fe5f1e] hover:text-white fill-[#fe5f1e] hover:fill-white border-[1px]  py-2 px-5 rounded-3xl duration-150 cursor-pointer"
     >

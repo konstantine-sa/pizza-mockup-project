@@ -1,7 +1,7 @@
 import React from "react";
 import ButtonOutlinedOrder from "../Buttons/ButtonOutlinedOrder";
 
-function PizzaItem({ imageUrl, types, name, price, sizes }) {
+function PizzaItem({ id, imageUrl, types, name, price, sizes }) {
   const [activeType, setActiveType] = React.useState(0);
   const [activeSize, setActiveSize] = React.useState(0);
   const [itemCount, setItemCount] = React.useState(0);
@@ -54,6 +54,12 @@ function PizzaItem({ imageUrl, types, name, price, sizes }) {
         <ButtonOutlinedOrder
           itemCount={itemCount}
           setItemCount={setItemCount}
+          id={id}
+          name={name}
+          type={activeType}
+          size={activeSize}
+          price={price[activeSize]}
+          imageUrl={imageUrl}
         />
       </div>
     </div>

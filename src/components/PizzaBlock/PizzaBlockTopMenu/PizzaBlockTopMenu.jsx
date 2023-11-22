@@ -7,7 +7,7 @@ import {
   setSort,
   setCategoryId,
   setFilterCategory,
-} from "../../../../src/redux/slices/pizzaFilterSlice.jsx";
+} from "../../../../src/redux/slices/pizzaFilterSlice.js";
 
 export const sortList = [
   {
