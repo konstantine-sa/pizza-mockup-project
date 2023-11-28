@@ -11,7 +11,7 @@ function CartItem({ id, name, type, price, count, imageUrl }) {
     );
   };
   const onClickMinus = () => {
-    if (count > 0) {
+    if (count > 1) {
       dispatch(minusItem(id));
     }
   };
