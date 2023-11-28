@@ -1,13 +1,16 @@
+import { useSelector } from "react-redux";
+
 import CartItem from "./CartItem";
 
 function CartContent() {
+  const items = useSelector((state) => state.cart.items);
+
   return (
     <div>
       <div className="flex flex-col">
-        <CartItem name="Dubble Cheese" price="13" />
-        <CartItem />
-        <CartItem />
-        <CartItem />
+        {items.map((item) => (
+          <CartItem key={item.id} {...item} />
+        ))}
       </div>
     </div>
   );

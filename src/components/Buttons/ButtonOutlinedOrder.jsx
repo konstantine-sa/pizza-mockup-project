@@ -12,6 +12,11 @@ function ButtonOutlinedOrder({
   setItemCount,
 }) {
   const dispatch = useDispatch();
+  const cartItem = useSelector((state) =>
+    state.cart.items.find((obj) => obj.id === id)
+  );
+
+  const addedCount = cartItem ? cartItem.count : 0;
 
   const onClickAdd = () => {
     const item = {
@@ -42,9 +47,11 @@ function ButtonOutlinedOrder({
         <path d="M10.8 4.8H7.2V1.2a1.2 1.2 0 0 0-2.4 0v3.6H1.2a1.2 1.2 0 0 0 0 2.4h3.6v3.6a1.2 1.2 0 0 0 2.4 0V7.2h3.6a1.2 1.2 0 0 0 0-2.4Z" />
       </svg>
       <span className="   font-semibold">Hinzufügen</span>
-      <div className="flex justify-center items-center text-sm bg-[#fe5f1e] group-hover:bg-white  text-white group-hover:text-[#fe5f1e] w-6 h-6  rounded-[50%] duration-150">
-        <p className=" ">{itemCount}</p>
-      </div>
+      {addedCount > 0 && (
+        <div className="flex justify-center items-center text-sm bg-[#fe5f1e] group-hover:bg-white  text-white group-hover:text-[#fe5f1e] w-6 h-6  rounded-[50%] duration-150">
+          <p className=" ">{addedCount}</p>
+        </div>
+      )}
     </button>
   );
 }

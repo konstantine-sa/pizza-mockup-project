@@ -1,28 +1,50 @@
-function CartItem(props) {
+import { useDispatch } from "react-redux";
+import { addItem, minusItem, removeItem } from "../../redux/slices/cartSlice";
+
+function CartItem({ id, name, type, price, count, imageUrl }) {
+  const dispatch = useDispatch();
+  const onClickPlus = () => {
+    dispatch(
+      addItem({
+        id,
+      })
+    );
+  };
+  const onClickMinus = () => {
+    dispatch(minusItem(id));
+  };
+  const onClickRemove = () => {
+    if (
+      window.confirm("Das ausgewählte Produkt aus dem Warenkorb entfernen?")
+    ) {
+      dispatch(removeItem(id));
+    }
+  };
+
   return (
     <div className="flex w-full pt-4 mt-4 lg:pt-8 lg:mt-7 border-t-[1px] border-t-[#f6f6f6]">
       {/* cart item img */}
       <div className="flex items-center mr-4 w-[15%]">
         <img
           className="w-9 h-9 sm:w-20 sm:h-20"
-          src="https://dodopizza-a.akamaihd.net/static/Img/Products/Pizza/ru-RU/b750f576-4a83-48e6-a283-5a8efb68c35d.jpg"
+          src={imageUrl}
           alt="Pizza Foto"
         />
       </div>
 
       {/* cart item info */}
       <div className="flex flex-col justify-center w-[40%]">
-        <h3 className="font-bold md:text-2xl text-[#232323]">
-          Hähnchen mit Käse
-        </h3>
-        <p className="text-sm md:text-lg text-[#8d8d8d]">Dünner Teig, 26 cm.</p>
+        <h3 className="font-bold md:text-2xl text-[#232323]">{name}</h3>
+        <p className="text-sm md:text-lg text-[#8d8d8d]">{type}, 26 cm.</p>
       </div>
 
       {/* cart item count */}
       <div className="flex justify-between items-center w-[20%] lg:w-[13%]">
+        {/* button Minus */}
         <div
           className="group cursor-pointer flex justify-center items-center bg-white hover:bg-[#fe5f1e] lg:w-8 lg:h-8 p-0
          border-[#fe5f1e]  border-[2px] rounded-full duration-150"
+          onClick={onClickMinus}
         >
           <svg
             className="ml-[1px] mr-[1px] mt-[2px] mb-[1px] box-border stroke-[#fe5f1e]  group-hover:stroke-white w-3 h-3 duration-150"
@@ -42,11 +64,13 @@ function CartItem(props) {
           </svg>
         </div>
 
-        <b className="lg:text-[22px] ml-1 mr-1">2</b>
+        <b className="lg:text-[22px] ml-1 mr-1">{count}</b>
 
+        {/* button Plus */}
         <div
           className="group cursor-pointer flex justify-center items-center bg-white hover:bg-[#fe5f1e] lg:w-8 lg:h-8 p-0
          border-[#fe5f1e]  border-[2px] rounded-full duration-150"
+          onClick={onClickPlus}
         >
           <svg
             className=" ml-[2px] mt-[2px] fill-[#fe5f1e] group-hover:fill-white w-3 h-3  duration-150"
@@ -69,7 +93,7 @@ function CartItem(props) {
 
       {/* cart item price */}
       <div className="flex justify-center items-center w-[20%] lg:w-[33%]">
-        <b className="md:text-[22px]">15 €</b>
+        <b className="md:text-[22px]">{price * count} €</b>
       </div>
 
       {/* cart item remove */}
@@ -77,6 +101,7 @@ function CartItem(props) {
         <div
           className="group cursor-pointer flex justify-center items-center bg-white hover:bg-black w-5 h-5 lg:w-8 lg:h-8 p-0
          border-gray-400 hover:border-black  border-[2px] rounded-full duration-150"
+          onClick={onClickRemove}
         >
           <svg
             className="rotate-45 mt-[3px] fill-gray-400 group-hover:fill-white w-3 h-3 duration-150"

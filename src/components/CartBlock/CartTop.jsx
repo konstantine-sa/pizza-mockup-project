@@ -1,4 +1,14 @@
+import { useDispatch } from "react-redux";
+import { clearItems } from "../../redux/slices/cartSlice";
+
 function CartTop() {
+  const dispatch = useDispatch();
+
+  const onClickClear = () => {
+    if (window.confirm("Alle Artikel aus dem Warenkorb entfernen?")) {
+      dispatch(clearItems());
+    }
+  };
   return (
     <div className="flex justify-between items-center mt-4 sm:mt-0 md:items-end w-full">
       <div className="flex items-center gap-1 sm:gap-3 text-base sm:text-4xl font-semibold ">
@@ -35,7 +45,10 @@ function CartTop() {
         Warenkorb
       </div>
 
-      <div className="group flex justify-end  gap-1  cursor-pointer  text-sm sm:text-xl text-gray-400 ">
+      <div
+        className="group flex justify-end  gap-1  cursor-pointer  text-sm sm:text-xl text-gray-400 "
+        onClick={onClickClear}
+      >
         <svg
           className="w-5 h-5 sm:w-8 sm:h-8 bottom-2 stroke-gray-400 group-hover:stroke-gray-950 duration-150"
           width="12"

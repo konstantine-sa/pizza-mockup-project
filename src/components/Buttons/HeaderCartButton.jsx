@@ -2,13 +2,13 @@ import { useSelector } from "react-redux";
 
 function HeaderCartButton() {
   const { items, totalPrice } = useSelector((state) => state.cart);
-  console.log(items, totalPrice);
+  const totalCount = items.reduce((sum, item) => sum + item.count, 0);
 
   return (
     <button>
-      <div className=" flex justify-center sm:justify-center items-center w-14 sm:w-[140px] h-[30px] sm:w-[16  0px] sm:h-[50px] relative bg-[#fe5f1e] hover:bg-[#e1480b] duration-150 ease-in-out cursor-pointer rounded-[30px] ">
+      <div className=" flex justify-center  items-center w-14  sm:w-[150px] h-[30px] sm:h-[50px] pl-1 relative bg-[#fe5f1e] hover:bg-[#e1480b] duration-150 ease-in-out cursor-pointer rounded-[30px] ">
         {/* ammount */}
-        <div className="flex  pb-px sm:left-[26px] sm:top-[14px] ">
+        <div className="flex">
           <div className="   text-white text-sm sm:text-lg font-semibold font-['Nunito']  max-sm:hidden">
             {totalPrice} €
           </div>
@@ -49,7 +49,7 @@ function HeaderCartButton() {
           </svg>
 
           <div className="left-[37px] top-[3px] sm:w-[10px] sm:h-[23px] sm:left-[104px] sm:top-[14px]  text-center text-white text-base font-semibold font-['Nunito'] leading-[23px]">
-            {items.length}
+            {totalCount}
           </div>
         </div>
       </div>
