@@ -6,6 +6,7 @@ function ButtonOutlinedOrder({
   name,
   type,
   size,
+  sizes,
   price,
   imageUrl,
   itemCount,
@@ -23,7 +24,7 @@ function ButtonOutlinedOrder({
       id,
       name,
       type,
-      size,
+      size: sizes[size],
       price,
       imageUrl,
     };

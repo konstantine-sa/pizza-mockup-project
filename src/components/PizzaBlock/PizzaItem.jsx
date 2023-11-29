@@ -57,6 +57,7 @@ function PizzaItem({ id, imageUrl, types, name, price, sizes }) {
           id={id}
           name={name}
           type={activeType}
+          sizes={sizes}
           size={activeSize}
           price={price[activeSize]}
           imageUrl={imageUrl}

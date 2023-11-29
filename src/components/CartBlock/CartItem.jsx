@@ -1,8 +1,11 @@
 import { useDispatch } from "react-redux";
 import { addItem, minusItem, removeItem } from "../../redux/slices/cartSlice";
 
-function CartItem({ id, name, type, price, count, imageUrl }) {
+function CartItem({ id, name, type, price, count, imageUrl, size }) {
   const dispatch = useDispatch();
+  const pizzaTypes = ["Dünner", "Traditioneller"];
+  const modalOn = true;
+
   const onClickPlus = () => {
     dispatch(
       addItem({
@@ -37,7 +40,9 @@ function CartItem({ id, name, type, price, count, imageUrl }) {
       {/* cart item info */}
       <div className="flex flex-col justify-center w-[40%]">
         <h3 className="font-bold md:text-2xl text-[#232323]">{name}</h3>
-        <p className="text-sm md:text-lg text-[#8d8d8d]">{type}, 26 cm.</p>
+        <p className="text-sm md:text-lg text-[#8d8d8d]">
+          {pizzaTypes[type]}, {size} cm.
+        </p>
       </div>
 
       {/* cart item count */}

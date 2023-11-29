@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import cartImg from "../../../public/img/empty-cart.png";
 import ButtonOutlinedBack from "../Buttons/ButtonOutlinedBack";
 
 function CartEmpty() {
@@ -14,10 +15,7 @@ function CartEmpty() {
           Um Produkte zu bestellen, gehen Sie zur Startseite.
         </p>
       </div>
-      <img
-        src="../../../public/img/empty-cart.png"
-        className="w-[200px]  sm:my-14"
-      />
+      <img src={cartImg} className="w-[200px]  sm:my-14" />
       <div className="sm:mb-2">
         <Link to="/">
           <ButtonOutlinedBack />
