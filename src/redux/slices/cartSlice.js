@@ -5,40 +5,54 @@ const initialState = {
   items: [],
 };
 
+const refactorFindItem = (state, payload) => {
+  return state.items.find(
+    (obj) =>
+      obj.id === payload.id &&
+      obj.type === payload.type &&
+      obj.size === payload.size
+  );
+};
+
 const cartSlice = createSlice({
   name: "cart",
   initialState,
   reducers: {
-    addItem(state, action) {
-      const findItem = state.items.find((obj) => obj.id === action.payload.id);
+    addItem(state, { payload }) {
+      const findItem = refactorFindItem(state, payload);
 
-      if (findItem) {
-        findItem.count++;
-      } else {
-        state.items.push({
-          ...action.payload,
-          count: 1,
-        });
-      }
+      findItem
+        ? findItem.count++
+        : state.items.push({
+            ...payload,
+            count: 1,
+          });
 
       state.totalPrice = state.items.reduce((sum, obj) => {
         return obj.price * obj.count + sum;
       }, 0);
     },
 
-    minusItem(state, action) {
-      const findItem = state.items.find((obj) => obj.id === action.payload);
+    minusItem(state, { payload }) {
+      const findItem = refactorFindItem(state, payload);
 
-      if (findItem) {
-        findItem.count--;
-        state.totalPrice = state.totalPrice - findItem.price;
-      }
+      findItem && findItem.count--;
+      state.totalPrice -= findItem.price;
     },
-    removeItem(state, action) {
-      const findItem = state.items.find((obj) => obj.id === action.payload);
-      state.items = state.items.filter((obj) => obj.id !== action.payload);
-      state.totalPrice = state.totalPrice - findItem.price;
+
+    removeItem(state, { payload }) {
+      const findItem = refactorFindItem(state, payload);
+
+      state.totalPrice -= findItem.price * findItem.count;
+      state.items = state.items.filter((obj) => {
+        return (
+          obj.id !== payload.id ||
+          obj.size !== payload.size ||
+          obj.type !== payload.type
+        );
+      });
     },
+
     clearItems(state) {
       state.items = [];
       state.totalPrice = 0;

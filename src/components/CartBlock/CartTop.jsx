@@ -5,9 +5,7 @@ function CartTop() {
   const dispatch = useDispatch();
 
   const onClickClear = () => {
-    if (window.confirm("Alle Artikel aus dem Warenkorb entfernen?")) {
-      dispatch(clearItems());
-    }
+    dispatch(clearItems());
   };
   return (
     <div className="flex justify-between items-center mt-4 sm:mt-0 md:items-end w-full">

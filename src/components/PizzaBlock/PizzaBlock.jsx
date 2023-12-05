@@ -7,15 +7,10 @@ import qs from "qs";
 import PizzaBlockTopMenu, {
   sortList,
 } from "./PizzaBlockTopMenu/PizzaBlockTopMenu";
-// import PizzaTitle from "./PizzaTitle";
 import PizzaItem from "./PizzaItem";
 import PizzaBlockSkeleton from "./PizzaBlockSkeleton";
 import { SearchContext } from "../../App";
-import {
-  setCategoryId,
-  setSort,
-  setFilters,
-} from "../../../src/redux/slices/pizzaFilterSlice.js";
+import { setFilters } from "../../../src/redux/slices/pizzaFilterSlice.js";
 
 function PizzaBlock() {
   const dispatch = useDispatch();
@@ -57,6 +52,9 @@ function PizzaBlock() {
       )
       .then((res) => {
         setPizzas(res.data);
+        setIsLoading(false);
+      })
+      .catch((err) => {
         setIsLoading(false);
       });
 

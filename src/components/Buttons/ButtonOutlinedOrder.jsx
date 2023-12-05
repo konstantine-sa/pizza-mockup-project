@@ -14,7 +14,9 @@ function ButtonOutlinedOrder({
 }) {
   const dispatch = useDispatch();
   const cartItem = useSelector((state) =>
-    state.cart.items.find((obj) => obj.id === id)
+    state.cart.items.find(
+      (obj) => obj.id === id && obj.type === type && obj.size === sizes[size]
+    )
   );
 
   const addedCount = cartItem ? cartItem.count : 0;

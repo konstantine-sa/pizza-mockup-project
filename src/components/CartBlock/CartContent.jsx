@@ -9,7 +9,7 @@ function CartContent() {
     <div>
       <div className="flex flex-col">
         {items.map((item) => (
-          <CartItem key={item.id} {...item} />
+          <CartItem key={item.id + item.type + item.size} {...item} />
         ))}
       </div>
     </div>

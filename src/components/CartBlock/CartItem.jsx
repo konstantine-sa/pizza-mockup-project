@@ -4,26 +4,23 @@ import { addItem, minusItem, removeItem } from "../../redux/slices/cartSlice";
 function CartItem({ id, name, type, price, count, imageUrl, size }) {
   const dispatch = useDispatch();
   const pizzaTypes = ["Dünner", "Traditioneller"];
-  const modalOn = true;
 
   const onClickPlus = () => {
     dispatch(
       addItem({
         id,
+        type,
+        size,
       })
     );
   };
   const onClickMinus = () => {
     if (count > 1) {
-      dispatch(minusItem(id));
+      dispatch(minusItem({ id, type, size }));
     }
   };
   const onClickRemove = () => {
-    if (
-      window.confirm("Das ausgewählte Produkt aus dem Warenkorb entfernen?")
-    ) {
-      dispatch(removeItem(id));
-    }
+    dispatch(removeItem({ id, type, size }));
   };
 
   return (
